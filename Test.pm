@@ -4,7 +4,7 @@ use strict;
 
 use Statistics::Test::TwoDist;
 use Data::Dumper;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head2 new
 
@@ -142,6 +142,28 @@ sub t_test{
    }
 }
 
+=head2 wilcoxon
+
+ Title   : wilcoxon
+ Usage   :
+ Function:
+ Example :
+ Returns : 
+ Args    :
+
+
+=cut
+
+sub wilcoxon{
+   my ($self,@args) = @_;
+   my @distributions = $self->distributions;
+   if ($self->_count == 2 && $distributions[0]->count == $distributions[1]->count) {
+	 return Statistics::Test::TwoDist::wilcoxon($distributions[0], $distributions[1]);
+   } else {
+	 die "wilcoxon test requires two distributions of equal size";
+   }
+
+}
 
 
 1;
