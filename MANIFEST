@@ -1,0 +1,8 @@
+Changes
+MANIFEST
+Makefile.PL
+README
+Test.pm
+Test/OneDist.pm
+Test/TwoDist.pm
+t/twodist.t

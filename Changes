@@ -1,0 +1,6 @@
+Revision history for Perl extension Statistics::Test.
+
+0.01  Fri Aug  8 14:27:03 2003
+	- original version; created by h2xs 1.21 with options
+		-AXn Statistics::Test
+
